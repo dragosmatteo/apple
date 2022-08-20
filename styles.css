@@ -1,0 +1,85 @@
+*, *::after, *::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   user-select: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    pointer-events: none
+
+}
+
+body {
+    background-image: url('./images/pexels-irina-iriser-1366957.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    color: #fff;
+    width: 100%;
+}
+
+.container {
+    position: absolute;
+    bottom: 0;
+    right: 10%; 
+    left: 10%;
+    width: 80%; 
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+}
+
+.list {
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+    align-content: center;
+    text-align: center; 
+}
+
+.list li {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.list li img {
+    width: 55px;
+    height: 50px;
+    transition:  all 0.4s;
+    transform-origin: 50% 100%;
+}
+
+.list li:hover img {
+    margin: 0 30px;
+    transform: scale(2);
+}
+
+.list li:hover + li img,
+.list li:prev img {
+    margin: 0 30px;
+    transform: scale(1.5);
+}
+
+.list li span {
+    display: none;
+    position: absolute;
+    bottom: 110px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3px 0;
+    border-radius: 10px;
+}
+
+.list li:hover span {
+    color: #fff;
+    display: block;
+}
